@@ -7,6 +7,14 @@ $document.ready(function(){
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
 
+    // this gets a "handle" to the clock div in the html
+    var clockDiv = document.getElementById('clock');
+    clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
+
   }
+
+  // this runs the displaytime function coded above the first time
+  displayTime();
+
 
 });
