@@ -1,20 +1,20 @@
-$document.ready(function(){
+//document.write("hello");
 
-  function displayTime() {
+
+
+function displayTime() {
 
     var currentTime = new Date();
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
 
-    // this gets a "handle" to the clock div in the html
-    var clockDiv = document.getElementById('clock');
-    clockDiv.innerText = hours + ":" + minutes + ":" + seconds;
+    // this gets the clock running in the html
+    document.body.innerHTML = hours + ":" + minutes + ":" + seconds;
 
   }
 
   // this runs the displaytime function coded above the first time
-  displayTime();
+  setInterval(displayTime, 1000);
 
 
-});
