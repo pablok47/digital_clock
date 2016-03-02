@@ -14,7 +14,7 @@ function displayTime() {
 
   }
 
-  // this runs the displaytime function coded above the first time
+  // this runs the displaytime function coded above and the setInterval makes the clock "tick"
   setInterval(displayTime, 1000);
 
 
