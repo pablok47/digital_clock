@@ -9,7 +9,7 @@ function displayTime() {
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
 
-    var day = currentTime.getDay();
+    var days = currentTime.getDay();
 
 
     var meridiem = "AM"; // this is the default
@@ -31,26 +31,46 @@ function displayTime() {
     }
 
 
+    switch (days) {
+
+      case 1:
+        days = "Monday";
+        break;
+      case 2:
+        days = "Tuesday";
+        break;
+      case 3:
+        days = "Wednesday";
+        break;
+      case 4:
+        days = "Thursday";
+        break;
+      case 5:
+        days = "Friday";
+        break;
+      case 6:
+        days = "Saturday";
+        break;
+      default:
+        days = "Sunday";
+
+    }
+
+
     // this gets the clock running in the html
-    document.body.innerHTML = day + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    document.body.innerHTML = days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
 
 
   }
 
+
+
+
   // this runs the displayTime function coded above and the setInterval makes the clock "tick"
   setInterval(displayTime, 1000);
 
-function displayDate() {
-
-    var currentDate = new Date();
-    var days = currentDate.getDay();
-
-    document.body.innerHTML = days;
 
 
-}
-
-displayDate();
 
 
 
