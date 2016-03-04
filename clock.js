@@ -35,4 +35,10 @@ function displayTime() {
   // this runs the displaytime function coded above and the setInterval makes the clock "tick"
   setInterval(displayTime, 1000);
 
+function displayDay() {
+  var currentDate = new Date ();
+  var day = currentDate.getDay();
+  var date = currentDate.getDate();
 
+  document.body.innerHTML = day + " " + date;
+}
