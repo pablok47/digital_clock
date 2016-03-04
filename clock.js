@@ -9,6 +9,9 @@ function displayTime() {
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
 
+    var day = currentTime.getDay();
+
+
     var meridiem = "AM"; // this is the default
     if (hours >= 12) {
       meridiem = "PM"
@@ -27,18 +30,30 @@ function displayTime() {
       seconds = "0" + seconds;
     }
 
+
     // this gets the clock running in the html
-    document.body.innerHTML = hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    document.body.innerHTML = day + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
+
 
   }
 
-  // this runs the displaytime function coded above and the setInterval makes the clock "tick"
+  // this runs the displayTime function coded above and the setInterval makes the clock "tick"
   setInterval(displayTime, 1000);
 
-function displayDay() {
-  var currentDate = new Date ();
-  var day = currentDate.getDay();
-  var date = currentDate.getDate();
+function displayDate() {
 
-  document.body.innerHTML = day + " " + date;
+    var currentDate = new Date();
+    var days = currentDate.getDay();
+
+    document.body.innerHTML = days;
+
+
 }
+
+displayDate();
+
+
+
+
+
+
