@@ -8,7 +8,7 @@ function displayTime() {
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
-
+    var date = currentTime.getDate();
     var days = currentTime.getDay();
 
 
@@ -58,7 +58,7 @@ function displayTime() {
 
 
     // this gets the clock running in the html
-    document.body.innerHTML = days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    document.body.innerHTML = date + " " + days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
 
 
   }
