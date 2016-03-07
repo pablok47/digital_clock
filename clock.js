@@ -1,4 +1,10 @@
-//document.write("hello");
+
+function onReady () {
+  console.log("Hello PK!");
+
+}
+
+window.onload = onReady;
 
 
 
