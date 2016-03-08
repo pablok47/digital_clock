@@ -2,6 +2,9 @@
 function onReady () {
   console.log("Hello PK!");
 
+  var theDate = new Date();
+  console.log(theDate);
+
 }
 
 window.onload = onReady;
@@ -15,6 +18,8 @@ function displayTime() {
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
     var date = currentTime.getDate();
+    var months = currentTime.getMonth();
+    var years = currentTime.getFullYear();
     var days = currentTime.getDay();
 
 
@@ -40,31 +45,71 @@ function displayTime() {
     switch (days) {
 
       case 1:
-        days = "Monday";
+        days = "Mon";
         break;
       case 2:
-        days = "Tuesday";
+        days = "Tue";
         break;
       case 3:
-        days = "Wednesday";
+        days = "Wed";
         break;
       case 4:
-        days = "Thursday";
+        days = "Thu";
         break;
       case 5:
-        days = "Friday";
+        days = "Fri";
         break;
       case 6:
-        days = "Saturday";
+        days = "Sat";
         break;
       default:
-        days = "Sunday";
+        days = "Sun";
+
+    }
+
+    switch (months) {
+
+      case 1:
+        months = "FEB";
+        break;
+      case 2:
+        months = "MAR";
+        break;
+      case 3:
+        months = "APR";
+        break;
+      case 4:
+        months = "MAY";
+        break;
+      case 5:
+        months = "JUN";
+        break;
+      case 6:
+        months = "JUL";
+        break;
+      case 7:
+        months = "AUG";
+        break;
+      case 8:
+        months = "SEP";
+        break;
+      case 9:
+        months = "OCT";
+        break;
+      case 10:
+        months = "NOV";
+        break;
+      case 11:
+        months = "DEC";
+        break;
+      default:
+        months = "JAN";
 
     }
 
 
     // this gets the clock running in the html
-    document.body.innerHTML = date + " " + days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    document.body.innerHTML = date + " " + months + " " + years + " " + days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
 
 
   }
