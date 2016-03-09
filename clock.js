@@ -5,6 +5,8 @@ function onReady () {
   var theDate = new Date();
   console.log(theDate);
 
+  //clock.innerText = "Whatever";
+
 }
 
 window.onload = onReady;
@@ -45,25 +47,25 @@ function displayTime() {
     switch (days) {
 
       case 1:
-        days = "Mon";
+        days = "Monday";
         break;
       case 2:
-        days = "Tue";
+        days = "Tueday";
         break;
       case 3:
-        days = "Wed";
+        days = "Wednesday";
         break;
       case 4:
-        days = "Thu";
+        days = "Thursday";
         break;
       case 5:
-        days = "Fri";
+        days = "Friday";
         break;
       case 6:
-        days = "Sat";
+        days = "Saturday";
         break;
       default:
-        days = "Sun";
+        days = "Sunday";
 
     }
 
@@ -109,7 +111,8 @@ function displayTime() {
 
 
     // this gets the clock running in the html
-    document.body.innerHTML = date + " " + months + " " + years + " " + days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
+    var clock = document.getElementById('clock');
+    clock.innerText = date + " " + months + " " + years + " " + days + " " + hours + ":" + minutes + ":" + seconds + " " + meridiem;
 
 
   }
